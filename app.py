@@ -4,10 +4,10 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 
 
-st.set_page_config(page_title="Into", page_icon=":male-student:", layout="wide")
+st.set_page_config(page_title="My website", page_icon=":male-student:", layout="wide")
 
 def load_lottieurl(url):
-    r = requests.get(url, verify=False)
+    r = requests.get(url)
     if r.status_code != 200:
         return None
     return r.json()
